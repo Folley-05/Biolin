@@ -21,6 +21,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AlimentaireComponent } from './alimentaire/alimentaire.component';
 import { PoissonsComponent } from './poissons/poissons.component';
 import { SanteComponent } from './sante/sante.component';
+import { ElectriciteComponent } from './electricite/electricite.component';
 
 
 
@@ -30,7 +31,8 @@ import { SanteComponent } from './sante/sante.component';
     NavComponent,
     AlimentaireComponent,
     PoissonsComponent,
-    SanteComponent
+    SanteComponent,
+    ElectriciteComponent
   ],
   imports: [
     BrowserModule,
