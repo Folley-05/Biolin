@@ -1,0 +1,68 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+   
+    <mat-toolbar>catégorie</mat-toolbar>
+    <mat-nav-list class="list-catégorie">
+      <a mat-list-item routerLink="agro-alimentaire">Agro Alimentaire</a>
+        <mat-divider></mat-divider>
+      <a mat-list-item routerLink="poissons_viandes">Poissons et viande</a>
+        <mat-divider></mat-divider>
+      <a mat-list-item routerLink="beaute_sante">santé et beauté</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="#">Electricié</a>
+      <mat-divider></mat-divider>
+    <a mat-list-item href="#">Equipements</a>
+      <mat-divider></mat-divider>
+    <a mat-list-item href="#">Services</a>
+       <mat-divider></mat-divider>
+       <a mat-list-item href="#">Agro Alimentaire</a>
+       <mat-divider></mat-divider>
+     <a mat-list-item href="#">Poissons et viande</a>
+       <mat-divider></mat-divider>
+     <a mat-list-item href="#">santé et beauté</a>
+     <mat-divider></mat-divider>
+     <a mat-list-item href="#">Electricié</a>
+     <mat-divider></mat-divider>
+     <a mat-list-item href="#">Equipements</a>
+     <mat-divider></mat-divider>
+     <a mat-list-item href="#">Services</a>
+      <mat-divider></mat-divider>
+     <a mat-list-item href="#">Agro Alimentaire</a>
+       <mat-divider></mat-divider>
+     <a mat-list-item href="#">Poissons et viande</a>
+       <mat-divider></mat-divider>
+     <a mat-list-item href="#">santé et beauté</a>
+       <mat-divider></mat-divider>
+     <a mat-list-item href="#">Electricié</a>
+       <mat-divider></mat-divider>
+       <a mat-list-item href="#">Equipements</a>
+       <mat-divider></mat-divider>
+    <a mat-list-item href="#">Services</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span></span>
+
+      <input type="text" class="form-control" placeholder="Entrer votre recherche..." >
+      <button class="btn btn-primary" ><i class="material-icons">search</i></button>
+
+      <i class="material-icons">user</i>
+      <i class="material-icons">user</i>
+      <i class="material-icons">user</i>
+      <i class="material-icons">user</i>
+    </mat-toolbar>
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
