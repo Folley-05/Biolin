@@ -26,6 +26,8 @@ import { ViandeComponent } from './viande/viande.component';
 import { BeauteComponent } from './beaute/beaute.component';
 import { SanteComponent } from './sante/sante.component';
 import { EquipementComponent } from './equipement/equipement.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { PanierComponent } from './component/panier/panier.component';
 
 
 
@@ -39,7 +41,9 @@ import { EquipementComponent } from './equipement/equipement.component';
     ViandeComponent,
     BeauteComponent,
     SanteComponent,
-    EquipementComponent
+    EquipementComponent,
+    FooterComponent,
+    PanierComponent
   ],
   imports: [
     BrowserModule,

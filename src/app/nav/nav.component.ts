@@ -17,22 +17,26 @@ export class NavComponent {
     {
       name: "Santé",
       statut: "En stock",
-      routerLink: "sante"
+      routerLink: "sante",
+      icon: "../../assets/icons/IMG-20210529-WA0026.jpg"
     },
     {
       name: "Viande",
       statut: "En attente",
-      routerLink: "viande"
+      routerLink: "viande",
+      icon: "../../assets/icons/IMG-20210529-WA0029.jpg"
     },
     {
       name: "equipement",
       statut: "En stock",
-      routerLink: "equipement"
+      routerLink: "equipement",
+      icon: "../../assets/icons/IMG-20210529-WA0028.jpg"
     },
     {
       name: "beaute",
       statut: "En attente",
-      routerLink: 'beaute'
+      routerLink: 'beaute',
+      icon: "../../assets/icons/IMG-20210529-WA0021.jpg"
     }
   ];
   

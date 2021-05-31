@@ -3,25 +3,43 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Categorie </mat-toolbar>
+    <mat-toolbar style="color: black; background-color: white; border: none;">Categorie </mat-toolbar>
     <mat-nav-list *ngFor="let categorie of categorieP">
-      <a mat-list-item routerLink="{{categorie.routerLink}}" class="text-white">{{categorie.name}}</a>
+      <a mat-list-item routerLink="{{categorie.routerLink}}" class="text-white">
+        <img src="{{categorie.icon}}" alt="" id="icon">
+           <h3>{{categorie.name}}</h3>
+      </a>
       <mat-divider></mat-divider>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary" style="background-color: white; color: black;" >
       <button
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon" style="color:green;">menu</mat-icon>
       </button>
-      <span>bioling</span>
+
+      <div class="col-lg-6">
+        <input type="search" class="form-control" placeholder="Entrer votre recherche...">
+      </div>
+      <button class="btn btn-primary"><i class="material-icons">search</i></button>
+       <div class="col-sm-4">
+        
+         <a routerLink="panier">
+          <img src="../../assets//icons/basket_icon-icons.com_67985 (1).png" alt="" class="header-icon">
+         </a> 
+         <a href="#">
+           <img src="../../assets//icons/account_tie_icon_138985.png" alt=""  class="header-icon">
+         </a>
+       </div>
+       <br><br><br><br>
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
+    <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
