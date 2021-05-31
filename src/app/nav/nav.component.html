@@ -3,60 +3,14 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-   
-    <mat-toolbar><h2>catégorie</h2></mat-toolbar>
-    <mat-nav-list class="list-catégorie">
-      <a mat-list-item routerLink="agro-alimentaire"> 
-        <i class="material-icons">savings</i>
-        Agro Alimentaire
-        </a>
-        <mat-divider></mat-divider>
-      <a mat-list-item routerLink="poissons_viandes">
-        <i class="material-icons">savings</i>
-        Poissons et viande
-      </a>
-        <mat-divider></mat-divider>
-      <a mat-list-item routerLink="beaute_sante">
-        <i class="material-icons">savings</i>
-        santé et beauté
-      </a>
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list *ngFor="let categorie of categorieP">
+      <a mat-list-item routerLink="{{categorie.routerLink}}" class="text-white">{{categorie.name}}</a>
       <mat-divider></mat-divider>
-      <a mat-list-item routerLink="electricite">
-        <i class="material-icons">savings</i>
-        Electricié
-      </a>
-      <mat-divider></mat-divider>
-    <a mat-list-item href="#">Equipements</a>
-      <mat-divider></mat-divider>
-    <a mat-list-item href="#">Services</a>
-       <mat-divider></mat-divider>
-       <a mat-list-item href="#">Agro Alimentaire</a>
-       <mat-divider></mat-divider>
-     <a mat-list-item href="#">Poissons et viande</a>
-       <mat-divider></mat-divider>
-     <a mat-list-item href="#">santé et beauté</a>
-     <mat-divider></mat-divider>
-     <a mat-list-item href="#">Electricié</a>
-     <mat-divider></mat-divider>
-     <a mat-list-item href="#">Equipements</a>
-     <mat-divider></mat-divider>
-     <a mat-list-item href="#">Services</a>
-      <mat-divider></mat-divider>
-     <a mat-list-item href="#">Agro Alimentaire</a>
-       <mat-divider></mat-divider>
-     <a mat-list-item href="#">Poissons et viande</a>
-       <mat-divider></mat-divider>
-     <a mat-list-item href="#">santé et beauté</a>
-       <mat-divider></mat-divider>
-     <a mat-list-item href="#">Electricié</a>
-       <mat-divider></mat-divider>
-       <a mat-list-item href="#">Equipements</a>
-       <mat-divider></mat-divider>
-    <a mat-list-item href="#">Services</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="">
+    <mat-toolbar color="primary">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -65,16 +19,9 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span></span>
-
-      <input type="text" class="form-control" placeholder="Entrer votre recherche..." >
-      <button class="btn btn-primary" ><i class="material-icons">search</i></button>
-
-      <i class="material-icons">user</i>
-      <i class="material-icons">user</i>
-      <i class="material-icons">user</i>
-      <i class="material-icons">user</i>
+      <span>bioling</span>
     </mat-toolbar>
-      <router-outlet></router-outlet>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,27 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AlimentaireComponent } from './alimentaire/alimentaire.component';
-import { ElectriciteComponent } from './electricite/electricite.component';
-import { PoissonsComponent } from './poissons/poissons.component';
+import { BeauteComponent } from './beaute/beaute.component';
+import { EquipementComponent } from './equipement/equipement.component';
 import { SanteComponent } from './sante/sante.component';
+import { ViandeComponent } from './viande/viande.component';
 
 const routes: Routes = [
-  {
-    path: 'agro-alimentaire',
-    component: AlimentaireComponent
-  },
-  {
-    path: 'poissons_viandes',
-    component: PoissonsComponent
-  },
-  {
-    path: 'beaute_sante',
-    component: SanteComponent
-  },
-  {
-    path:'electricite',
-    component: ElectriciteComponent
-  }
+ {
+   path: 'sante',
+   component: SanteComponent
+ },
+ {
+   path: 'viande',
+   component: ViandeComponent
+ },
+ {
+   path: 'equipement',
+   component: EquipementComponent
+ },
+ {
+   path: 'beaute',
+   component: BeauteComponent
+ }
 ];
 
 @NgModule({
